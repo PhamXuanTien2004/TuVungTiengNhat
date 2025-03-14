@@ -2,11 +2,12 @@ package entity;
 
 public class students extends admin{
     private int levelNow;
-    private int finished;
+    private int finishedWord;
 
-    public students(String fullName, Gender gender, int age, String email, String password, int levelNow) {
+    public students(String fullName, Gender gender, int age, String email, String password, int levelNow, int finishedWord) {
         super(fullName, gender, age, email, password);
         this.levelNow = levelNow;
+        this.finishedWord = finishedWord;
     }
 
     public int getLevelNow() {
@@ -17,12 +18,12 @@ public class students extends admin{
         this.levelNow = levelNow;
     }
 
-    public int getFinished() {
-        return finished;
+    public int getFinishedWord() {
+        return finishedWord;
     }
 
-    public void setFinished(int finished) {
-        this.finished = finished;
+    public void setFinishedWord(int finishedWord) {
+        this.finishedWord = finishedWord;
     }
 
     @Override
