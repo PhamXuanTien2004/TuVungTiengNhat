@@ -1,11 +1,11 @@
 package entity;
 
-public class teachers extends admin {
+public class Teachers extends Users {
     private int levelNow;
     private int expInYear;
     private String country;
 
-    public teachers(String fullName, Gender gender, int age, String email, String password, int levelNow, int expInYear, String country) {
+    public Teachers(String fullName, Gender gender, int age, String email, String password, int levelNow, int expInYear, String country) {
         super(fullName, gender, age, email, password);
         this.levelNow = levelNow;
         this.expInYear = expInYear;

@@ -1,6 +1,6 @@
 package entity;
 
-public class admin {
+public class Users {
     private int id;
     private String fullName;
     private Gender gender;
@@ -8,12 +8,19 @@ public class admin {
     private String email;
     private String password;
 
-    public admin(String fullName, Gender gender, int age, String email, String password) {
+    public Users(String fullName, Gender gender, int age, String email, String password) {
         this.fullName = fullName;
         this.gender = gender;
         this.age = age;
         this.email = email;
         this.password = password;
+    }
+
+    public Users (String fullName, Gender gender, int age, String email) {
+        this.fullName = fullName;
+        this.gender = gender;
+        this.age = age;
+        this.email = email;
     }
 
     public int getId() {
@@ -66,11 +73,10 @@ public class admin {
 
     @Override
     public String toString() {
-        return  "id=" + id +
-                ", fullName='" + fullName + '\'' +
+        return
+                "fullName='" + fullName + '\'' +
                 ", gender=" + gender +
                 ", age=" + age +
-                ", email='" + email + '\'' +
-                ", password='" + password ;
+                ", email='" + email ;
     }
 }
