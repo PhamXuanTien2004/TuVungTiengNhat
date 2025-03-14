@@ -11,7 +11,7 @@ CREATE TABLE `user` (
     gender ENUM('Female', 'Male'),
     age INT NOT NULL,
     email VARCHAR(50) NOT NULL UNIQUE,
-    password VARCHAR(50) NOT NULL  -- Sửa VARCHAR(12) -> VARCHAR(50)
+    `password` VARCHAR(50) NOT NULL  
 );
 
 -- Tạo bảng Teacher
@@ -34,7 +34,7 @@ CREATE TABLE student (
 );
 
 -- Chèn dữ liệu vào bảng User trước
-INSERT INTO `user` (fullName, gender, age, email, password) VALUES
+INSERT INTO `user` (fullName, gender, age, email, `password`) VALUES
     ('Nguyễn Văn A', 'Male', 30, 'nguyenvana@example.com', 'password123'),
     ('Trần Thị B', 'Female', 25, 'tranthib@example.com', 'abc@12345'),
     ('Lê Văn C', 'Male', 40, 'levanc@example.com', 'securePass!'),
