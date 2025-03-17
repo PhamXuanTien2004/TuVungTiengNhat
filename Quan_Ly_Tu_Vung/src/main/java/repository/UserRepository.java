@@ -10,7 +10,7 @@ public class UserRepository implements IUserRepository {
 
     @Override
     public Users login(String email, String password) {
-        String sql = "SELECT * FROM user WHERE email = ? AND `password` = ?";
+        String sql = "SELECT * FROM `user` WHERE email = ? AND `password` = ?";
 
         try(Connection connection = JDBCUtils.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(sql)){
@@ -29,6 +29,11 @@ public class UserRepository implements IUserRepository {
         } catch (Exception e){
             e.printStackTrace();
         }
+        return null;
+    }
+
+    @Override
+    public Users check(String email, String password) {
         return null;
     }
 

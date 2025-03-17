@@ -5,8 +5,8 @@ public class Teachers extends Users {
     private int expInYear;
     private String country;
 
-    public Teachers(String fullName, Gender gender, int age, String email, String password, int levelNow, int expInYear, String country) {
-        super(fullName, gender, age, email, password);
+    public Teachers(String fullName, Gender gender, int age, String email, int levelNow, int expInYear, String country) {
+        super(fullName, gender, age, email);
         this.levelNow = levelNow;
         this.expInYear = expInYear;
         this.country = country;

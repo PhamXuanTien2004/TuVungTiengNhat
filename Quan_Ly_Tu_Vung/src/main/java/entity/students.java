@@ -10,6 +10,12 @@ public class Students extends Users {
         this.finishedWord = finishedWord;
     }
 
+    public Students(String fullName, Gender gender, int age, String email, int levelNow, int finishedWord) {
+        super(fullName, gender, age, email);
+        this.levelNow = levelNow;
+        this.finishedWord = finishedWord;
+    }
+
     public int getLevelNow() {
         return levelNow;
     }
