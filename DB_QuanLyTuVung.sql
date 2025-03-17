@@ -33,6 +33,21 @@ CREATE TABLE student (
     FOREIGN KEY (id) REFERENCES `user`(id) ON DELETE CASCADE
 );
 
+-- Tạo bảng word
+DROP TABLE IF EXISTS word;
+CREATE TABLE word (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    chu VARCHAR(50) NOT NULL,
+    am VARCHAR(50) NOT NULL,
+    `level` INT NOT NULL,
+    FOREIGN KEY (`level`) REFERENCES student (`level`) ON DELETE CASCADE
+);
+
+-- Chèn dữ liệu vào bảng word trước
+INSERT INTO word (chu, am, `level`) VALUES
+				('私', 'わたし', 5),
+				('あなた', 'あなた', 5);
+
 -- Chèn dữ liệu vào bảng User trước
 INSERT INTO `user` (fullName, gender, age, email, `password`) VALUES
     ('Nguyễn Văn A', 'Male', 30, 'nguyenvana@example.com', 'password123'),
@@ -81,4 +96,3 @@ INSERT INTO teacher (id, levelNow, country, ExpInYear) VALUES
     (13, 1, 'VietNam', 3),
     (18, 5, 'Japan', 10),
     (20, 5, 'VietNam', 4);
-
