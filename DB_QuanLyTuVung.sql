@@ -39,15 +39,14 @@ CREATE TABLE vocabulary (
     id INT PRIMARY KEY AUTO_INCREMENT,
     word VARCHAR(50) NOT NULL,
     speak VARCHAR(50) NOT NULL,
-    `level` INT NOT NULL,
-    FOREIGN KEY (`level`) REFERENCES student (`level`) ON DELETE CASCADE
+    `level` INT NOT NULL
 );
 
 -- Chèn dữ liệu vào bảng vocabulary trước
 INSERT INTO vocabulary (word, speak, `level`) VALUES
 				('私', 'わたし', 5),
 				('あなた', 'あなた', 5);
-
+SELECT * FROM vocabulary;
 -- Chèn dữ liệu vào bảng User trước
 INSERT INTO `user` (fullName, gender, age, email, `password`) VALUES
     ('Nguyễn Văn A', 'Male', 30, 'nguyenvana@example.com', 'password123'),
