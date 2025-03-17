@@ -33,18 +33,18 @@ CREATE TABLE student (
     FOREIGN KEY (id) REFERENCES `user`(id) ON DELETE CASCADE
 );
 
--- Tạo bảng word
-DROP TABLE IF EXISTS word;
-CREATE TABLE word (
+-- Tạo bảng vocabulary
+DROP TABLE IF EXISTS vocabulary;
+CREATE TABLE vocabulary (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    chu VARCHAR(50) NOT NULL,
-    am VARCHAR(50) NOT NULL,
+    word VARCHAR(50) NOT NULL,
+    speak VARCHAR(50) NOT NULL,
     `level` INT NOT NULL,
     FOREIGN KEY (`level`) REFERENCES student (`level`) ON DELETE CASCADE
 );
 
--- Chèn dữ liệu vào bảng word trước
-INSERT INTO word (chu, am, `level`) VALUES
+-- Chèn dữ liệu vào bảng vocabulary trước
+INSERT INTO vocabulary (word, speak, `level`) VALUES
 				('私', 'わたし', 5),
 				('あなた', 'あなた', 5);
 
