@@ -6,8 +6,14 @@ public class Vocabulary {
     private String speak;
     private int level;
 
-    public Vocabulary(String word, String speak, int level) {
+    public Vocabulary(int id, String word, String speak, int level) {
         this.id = id;
+        this.word = word;
+        this.speak = speak;
+        this.level = level;
+    }
+
+    public Vocabulary(String word, String speak, int level) {
         this.word = word;
         this.speak = speak;
         this.level = level;

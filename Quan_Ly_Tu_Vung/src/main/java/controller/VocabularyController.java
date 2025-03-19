@@ -10,4 +10,7 @@ public class VocabularyController {
     public List<Vocabulary> getAllVocabulary(){
         return vocabularyService.getAllVocabulary();
     }
+    public boolean createVocabulary(Vocabulary vocabulary){
+        return vocabularyService.createVocabulary(vocabulary);
+    }
 }

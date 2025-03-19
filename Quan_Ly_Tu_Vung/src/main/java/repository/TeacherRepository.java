@@ -13,7 +13,7 @@ public class TeacherRepository implements ITeacherRepository {
 
     @Override
     public Teachers checkTeacher(String email, String password) {
-        String sql = "SELECT * FROM `user` LEFT JOIN teacher USING(id) WHERE email = ? AND `password` = ?";
+        String sql = "SELECT * FROM `user` RIGHT JOIN teacher USING(id) WHERE email = ? AND `password` = ?";
 
         try (Connection connection = JDBCUtils.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(sql)) {

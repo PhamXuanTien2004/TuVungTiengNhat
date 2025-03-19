@@ -18,7 +18,8 @@ public class Program {
     public static void main(String[] args) {
         run();
     }
-
+// email: tranthib@example.com
+// password: abc@12345
     public static void run(){
         Users user;
         Teachers teacher ;
@@ -48,7 +49,7 @@ public class Program {
             else {
                 System.out.flush();
                 System.err.println("Lỗi đăng nhập!");
-                System.err.println("Sai Email hặc Mật khẩu.");
+                System.err.println("Sai Email hoặc Mật khẩu.");
             }
         }
     }
@@ -115,8 +116,9 @@ public class Program {
         System.out.print("Nhập cấp bậc: ");
         int level = scanner.nextInt();
         scanner.nextLine();
-
-        vocabularyList.add(new Vocabulary(word, speak, level));
+        Vocabulary createVocabulary = new Vocabulary(word, speak, level);
+        System.out.println(vocabularyController.createVocabulary(createVocabulary));
+        vocabularyList.add(createVocabulary);
         System.out.println("Đã thêm giáo viên thành công.");
     }
 //

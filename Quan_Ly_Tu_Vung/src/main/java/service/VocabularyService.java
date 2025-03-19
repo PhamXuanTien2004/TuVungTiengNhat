@@ -11,4 +11,9 @@ public class VocabularyService implements IVocabularyService{
     public List<Vocabulary> getAllVocabulary() {
         return vocabularyRepository.getAllVocabulary();
     }
+
+    @Override
+    public boolean createVocabulary(Vocabulary vocabulary) {
+        return vocabularyRepository.createVocabulary(vocabulary);
+    }
 }
